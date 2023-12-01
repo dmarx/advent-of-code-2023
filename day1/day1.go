@@ -24,7 +24,8 @@ func main() {
 	//////////////////////////////////////////////////////////////
 
 	// Open the file.
-	file, err := os.Open("test_input.txt")
+	//file, err := os.Open("test_input.txt")
+	file, err := os.Open("input.txt")
 	if err != nil {
 		// Handle the error and exit.
 		fmt.Println("Error opening the file:", err)
