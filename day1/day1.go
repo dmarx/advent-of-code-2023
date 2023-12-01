@@ -38,29 +38,18 @@ func main() {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Println(line) // Print each line.
+		//fmt.Println(line) // Print each line.
 		matches := re.FindAllString(line, -1)
-		//result := strings.Join(matches, "")
-		//fmt.Println(result)
 
 		hit0 := matches[0]
-		//hit1 := matches[-1]
 		hit1 := matches[len(matches)-1]
 		arr := []string{hit0, hit1}
-		//inner := strings.Join(arr, "")
 
 		result := strings.Join(arr, "")
-		fmt.Println(result)
+		//fmt.Println(result)
 
-		//for _, name := range []string{"Bob", "Bill", "Joe"} {
-		//fmt.Printf("%s\n", inner)
-		//}
-
-		// for _, match := range matches {
 		num, _ := strconv.Atoi(result)
 		acc += num
-		fmt.Printf("%s\n", acc)
-		// }
 
 	}
 
